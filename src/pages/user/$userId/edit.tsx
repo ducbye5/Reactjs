@@ -9,10 +9,8 @@ export const Route = createFileRoute("/user/$userId/edit")({
 });
 
 function RouteComponent() {
-  const { userId } = Route.useParams();
-  // const { data: user } = UserAPI.getUserDetail(userId);
+  // const { userId } = Route.useParams();
   const user = useLoaderData({ from: "/user/$userId/edit" });
-  // const user = useLoaderData() as { id: number; name: string }[];
 
   return (
     <div className="space-y-2">
